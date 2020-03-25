@@ -1,6 +1,6 @@
 import { fetchCovidInfo } from './apiCall';
 
-describe('api gets called', () => {
+describe('CovidInfo api gets called', () => {
 
   it('calls API and gets 200 code', ()=> {
     fetchCovidInfo().then(res => {
