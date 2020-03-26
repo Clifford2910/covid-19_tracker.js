@@ -2,11 +2,10 @@
   width: auto;
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   align-items: center;
   text-align: center;
   overflow: auto;
-  margin: auto;
 }
 
 .ui.statistic {
@@ -16,7 +15,7 @@
   flex-wrap: wrap;
   align-items: center;
   text-align: center;
-  overflow: auto;
+  overflow: auto
 }
 
 .value {

@@ -26,18 +26,22 @@ html, body {
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
+  text-align: center;
   font-family: 'Roboto', sans-serif;
   background: #efefef;
-  overflow-y: auto
+  overflow-y: auto;
+  padding: 15px;
 }
 
 .panel {
-  width: 100%;
-  justify-content: center;
+  width: 90%;
+  height: 100%;
+  background: #838CC7;
+  box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.10);
+  border-radius: 6px;
+  padding: 15px;
+  overflow: hidden;
   align-items: center;
-  font-family: 'Roboto', sans-serif;
-  background: #efefef;
-  overflow-y: auto
 }
 
 .panel-header {
@@ -45,7 +49,7 @@ html, body {
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
-  padding: 0 30px;
+  padding: 15px;
   height: 100px;
   background: #fff;
 }
@@ -65,23 +69,27 @@ html, body {
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
-  overflow: auto;
-  margin: auto;
-}
-
-.categories {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: center;
+  text-align: center;
   overflow: auto;
   justify-content: space-between;
   flex-basis: auto;
   margin: auto;
 }
 
-.category {
+.statistics {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  text-align: center;
+  overflow: auto;
+  justify-content: space-between;
+  flex-basis: auto;
+  margin: auto;
+}
+
+.statistic {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -92,7 +100,7 @@ html, body {
   margin: auto;
 }
 
-.category :first-child {
+.statistic :first-child {
   width: auto;
   display: flex;
   flex-direction: row;
@@ -104,10 +112,21 @@ html, body {
   font-size: 32px;
   color: #000000;
   margin-bottom: 6px;
+  margin: 5px auto;
 }
 
-.category :last-child {
-  font-size: 14px;
+.statistic :last-child {
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  text-align: center;
+  overflow: auto;
   font-weight: 300;
+  font-size: 14px;
   color: #000000;
+  margin-bottom: 6px;
+  margin: 5px;
+  margin: 5px auto;
 }

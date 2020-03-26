@@ -25,8 +25,8 @@ class App extends React.Component {
             <Header />
           </div>
           <div class="panel-body">
-            <div class="categories">
-              <div class="category">
+            <div class="statistics">
+              <div class="statistic">
                 {this.state.globalCovid.map((gc) => {
                   return (
                     <GlobalStatistic key={gc.toString()} gc={ gc } />
