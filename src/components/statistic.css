@@ -1,0 +1,32 @@
+.ui.inverted.statistic {
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  text-align: center;
+  overflow: auto;
+  margin: auto;
+}
+
+.ui.statistic {
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+  overflow: auto;
+}
+
+.value {
+  width: auto;
+  align-items: center;
+  text-align: center;
+}
+
+.label {
+  width: auto;
+  align-items: center;
+  text-align: center;
+}
