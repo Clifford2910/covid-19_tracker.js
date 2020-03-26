@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import Header from './components/header'
+import Header2 from './components/header2'
 import GlobalStatistic from './components/statistic'
 import { fetchGlobalCovidInfo } from './services/apiCall'
 
@@ -19,14 +20,14 @@ class App extends React.Component {
 
   render() {
     return (
-      <div class="wrapper">
-        <div class="panel">
-          <div class="panel-header">
+      <div className="wrapper">
+        <div className="panel">
+          <div className="panel-header">
             <Header />
           </div>
-          <div class="panel-body">
-            <div class="statistics">
-              <div class="statistic">
+          <div className="panel-body">
+            <div className="statistics">
+              <div className="statistic">
                 {this.state.globalCovid.map((gc) => {
                   return (
                     <GlobalStatistic key={gc.toString()} gc={ gc } />
@@ -34,6 +35,9 @@ class App extends React.Component {
                 })}
               </div>
             </div>
+          </div>
+          <div className="panel-header">
+            <Header2 />
           </div>
         </div>
       </div>
