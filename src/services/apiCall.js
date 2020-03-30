@@ -6,3 +6,12 @@ export const fetchGlobalCovidInfo = async () => {
     return await response.json()
   }
 };
+
+export const fetchCountryCovidInfo = async () => {
+  const response = await fetch('https://thevirustracker.com/free-api?countryTotals=ALL')
+  if(response.status !== 200) {
+    throw(new Error('Error fetching countryCovid-19 info'))
+  } else {
+    return await response.json()
+  }
+};

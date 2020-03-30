@@ -1,22 +1,43 @@
 import { fetchGlobalCovidInfo } from './apiCall';
+import { fetchCountryCovidInfo } from './apiCall';
 
-describe('CovidInfo api gets called', () => {
 
-  it('calls API and gets 200 code', ()=> {
+describe('GlobalCovidInfo api gets called', () => {
+  it('calls global API and gets 200 code', ()=> {
     fetchGlobalCovidInfo().then(res => {
       expect(res.status).toEqual(200);
     })
   });
 
-  it('calls API and returns an array', ()=> {
+  it('calls global API and returns an array', ()=> {
     fetchGlobalCovidInfo().then(res => {
       expect(res.results).toEqual(Array);
     })
   });
 
-  it('calls API and returns an array of length 1', ()=> {
+  it('calls global API and returns the length of the array', ()=> {
     fetchGlobalCovidInfo().then(res => {
       expect(res.results.length).toEqual(1);
+    })
+  });
+});
+
+describe('CountryCovidInfo api gets called', () => {
+  it('calls country API and gets 200 code', ()=> {
+    fetchGlobalCovidInfo().then(res => {
+      expect(res.status).toEqual(200);
+    })
+  });
+
+  it('calls country API and returns an array', ()=> {
+    fetchGlobalCovidInfo().then(res => {
+      expect(res.results).toEqual(Array);
+    })
+  });
+
+  it('calls country API and returns the length of the array', ()=> {
+    fetchGlobalCovidInfo().then(res => {
+      expect(res.results.length).toEqual(2);
     })
   });
 });
