@@ -130,3 +130,23 @@ html, body {
   margin: 5px;
   margin: 5px auto;
 }
+
+.tables {
+  width: 100%;
+  align-items: center;
+  text-align: center;
+  overflow: auto;
+  justify-content: space-between;
+  flex-basis: auto;
+  margin: auto;
+  border: 1px solid white;
+}
+
+.table {
+  width: auto;
+  align-items: center;
+  text-align: center;
+  overflow: auto;
+  margin: auto;
+  border: 1px solid white;
+}
