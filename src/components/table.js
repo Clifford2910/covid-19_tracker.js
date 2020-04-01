@@ -1,4 +1,3 @@
-import _ from 'lodash'
 import React, { Component } from 'react'
 import './table.css';
 import { Table } from 'semantic-ui-react'
@@ -9,33 +8,13 @@ class SortableTable extends React.Component {
   }
   state = {
     column: null,
-    data: [],
     direction: null,
   }
 
-  handleSort = (clickedColumn) => () => {
-    const { column, data, direction } = this.state
-
-    if (column !== clickedColumn) {
-      this.setState({
-        column: clickedColumn,
-        data: _.sortBy(data, [clickedColumn]),
-        direction: 'ascending',
-      })
-
-      return
-    }
-
-    this.setState({
-      data: data.reverse(),
-      direction: direction === 'ascending' ? 'descending' : 'ascending',
-    })
-  }
-
   render() {
-    let allCountryRows = []
+    let allCountryDataRows = []
     for (var i = 1; i < 183; i++) {
-      allCountryRows.push(
+      allCountryDataRows.push(
       <Table.Row key={this.props.cc[i].title}>
         <Table.Cell>{this.props.cc[i].title}</Table.Cell>
         <Table.Cell>{this.props.cc[i].total_cases}</Table.Cell>
@@ -49,64 +28,64 @@ class SortableTable extends React.Component {
       )
     }
 
-    const { column, data, direction } = this.state
+    const { column, direction } = this.state
 
     return (
       <Table sortable celled fixed>
         <Table.Header>
           <Table.Row>
             <Table.HeaderCell
-              sorted={column === 'name' ? direction : null}
-              onClick={this.handleSort('name')}
+              sorted={column === 'title' ? direction : null}
+              // onClick={this.handleSort('title')}
             >
               Name
             </Table.HeaderCell>
             <Table.HeaderCell
-              sorted={column === 'Total Cases' ? direction : null}
-              onClick={this.handleSort('Total Cases')}
+              sorted={column === 'total_cases' ? direction : 'ascending'}
+              // onClick={this.handleSort('total_cases')}
             >
               Total Cases
             </Table.HeaderCell>
             <Table.HeaderCell
-              sorted={column === 'Total Recovered' ? direction : null}
-              onClick={this.handleSort('Total Recovered')}
+              sorted={column === 'total_recovered' ? direction : null}
+              // onClick={this.handleSort('total_recovered')}
             >
               Total Recovered
             </Table.HeaderCell>
             <Table.HeaderCell
-              sorted={column === 'Total Deaths' ? direction : null}
-              onClick={this.handleSort('Total Deaths')}
+              sorted={column === 'total_deaths' ? direction : null}
+              // onClick={this.handleSort('total_deaths')}
             >
               Total Deaths
             </Table.HeaderCell>
             <Table.HeaderCell
-              sorted={column === 'Active Cases' ? direction : null}
-              onClick={this.handleSort('Active Cases')}
+              sorted={column === 'total_active_cases' ? direction : null}
+              // onClick={this.handleSort('total_active_cases')}
             >
               Active Cases
             </Table.HeaderCell>
             <Table.HeaderCell
-              sorted={column === 'Serious Cases' ? direction : null}
-              onClick={this.handleSort('Serious Cases')}
+              sorted={column === 'total_serious_cases' ? direction : null}
+              // onClick={this.handleSort('total_serious_cases')}
             >
               Serious Cases
             </Table.HeaderCell>
             <Table.HeaderCell
-              sorted={column === 'New Cases Today' ? direction : null}
-              onClick={this.handleSort('New Cases Today')}
+              sorted={column === 'total_new_cases_today' ? direction : null}
+              // onClick={this.handleSort('total_new_cases_today')}
             >
               New Cases Today
             </Table.HeaderCell>
             <Table.HeaderCell
-              sorted={column === 'New Deaths Today' ? direction : null}
-              onClick={this.handleSort('New Deaths Today')}
+              sorted={column === 'total_new_deaths_today' ? direction : null}
+              // onClick={this.handleSort('total_new_deaths_today')}
             >
               New Deaths Today
             </Table.HeaderCell>
           </Table.Row>
         </Table.Header>
         <Table.Body>
-          {allCountryRows}
+          {allCountryDataRows}
         </Table.Body>
       </Table>
     )
