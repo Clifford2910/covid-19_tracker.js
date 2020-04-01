@@ -23,6 +23,7 @@ table.ui.celled.fixed.sortable.table thead th {
   color: #FFFFFF;
   text-align: center;
   border-left: 2px solid #A40808;
+  padding-bottom: 5px
 }
 table.ui.celled.fixed.sortable.table thead th:first-child {
   border-left: none;
