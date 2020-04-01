@@ -4,7 +4,7 @@ import './header.css';
 const Header2 =  () => {
   return (
     <header>
-      <h1>Covid-19 Info by Country</h1>
+      <h1>Statistics per Country</h1>
     </header>
   )
 };
