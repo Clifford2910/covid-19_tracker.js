@@ -10,6 +10,6 @@ test('can read the Header', () => {
 
 test('can read the second Header', () => {
   const { getByText } = render(<App />);
-  const header2 = getByText(/Covid-19 Info by Country/i);
+  const header2 = getByText(/Statistics per Country/i);
   expect(header2).toBeInTheDocument();
 });
