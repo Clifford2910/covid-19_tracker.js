@@ -20,7 +20,6 @@ table.ui.celled.fixed.sortable.table thead {
 }
 table.ui.celled.fixed.sortable.table thead th {
   font-size: 19px;
-  font-weight: bold;
   color: #FFFFFF;
   text-align: center;
   border-left: 2px solid #A40808;
@@ -28,29 +27,3 @@ table.ui.celled.fixed.sortable.table thead th {
 table.ui.celled.fixed.sortable.table thead th:first-child {
   border-left: none;
 }
-
-/* .ui.tables {
-  width: 100%;
-  background: #838CC7;
-  margin: 1em 0;
-  border: 1px solid rgba(34,36,38,.15);
-  box-shadow: none;
-  border-radius: .28571429rem;
-  text-align: left;
-  color: rgba(0,0,0,.87);
-  border-collapse: separate;
-  border-spacing: 0;
-}
-
-.ui.table {
-  width: 100%;
-  background: #838CC7;
-  margin: 1em 0;
-  border: 1px solid rgba(34,36,38,.15);
-  box-shadow: none;
-  border-radius: .28571429rem;
-  text-align: left;
-  color: rgba(0,0,0,.87);
-  border-collapse: separate;
-  border-spacing: 0;
-} */
